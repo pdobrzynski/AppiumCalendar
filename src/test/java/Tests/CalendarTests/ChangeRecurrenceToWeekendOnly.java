@@ -6,21 +6,22 @@ import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class CreateNewEvent extends BaseTest {
+public class ChangeRecurrenceToWeekendOnly extends BaseTest {
 
     @Test
-    public void createNewEvent() throws InterruptedException {
+    public void changeReccurenceToWeekendOnly() {
 
         androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         CalendarPage calendar = new CalendarPage(androidDriver, wait);
 
         calendar.activateCalendarApp();
-        calendar.clickCreateNewEvent();
-        calendar.enterTitleOfNewEvent();
+        calendar.clickNewEvent();
+        calendar.clickEditEventButton();
+        calendar.clickChangeRecurrence();
+        calendar.setRecurrenceToWeekendOnly();
         calendar.clickSaveNewEvent();
-        calendar.checkIfNewEventIsCreated();
+        calendar.confirmChangesForEvent();
 
     }
-
 }

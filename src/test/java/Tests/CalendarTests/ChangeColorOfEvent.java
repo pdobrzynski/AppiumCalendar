@@ -6,21 +6,21 @@ import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class CreateNewEvent extends BaseTest {
+public class ChangeColorOfEvent extends BaseTest {
 
     @Test
-    public void createNewEvent() throws InterruptedException {
+    public void changeColorOfEvent() {
 
         androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         CalendarPage calendar = new CalendarPage(androidDriver, wait);
 
         calendar.activateCalendarApp();
-        calendar.clickCreateNewEvent();
-        calendar.enterTitleOfNewEvent();
+        calendar.clickNewEvent();
+        calendar.clickEditEventButton();
+        calendar.clickChangeEventColor();
         calendar.clickSaveNewEvent();
-        calendar.checkIfNewEventIsCreated();
+        calendar.closeEventBackToCalendar();
 
     }
-
 }

@@ -6,21 +6,22 @@ import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class CreateNewEvent extends BaseTest {
+
+public class SwitchAllDayEventOff extends BaseTest {
 
     @Test
-    public void createNewEvent() throws InterruptedException {
+    public void switchAllDayEventOff() {
 
         androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         CalendarPage calendar = new CalendarPage(androidDriver, wait);
 
         calendar.activateCalendarApp();
-        calendar.clickCreateNewEvent();
-        calendar.enterTitleOfNewEvent();
+        calendar.clickChangedEvent();
+        calendar.clickEditEventButton();
+        calendar.switchAllDayToOff();
         calendar.clickSaveNewEvent();
-        calendar.checkIfNewEventIsCreated();
+        calendar.closeEventBackToCalendar();
 
     }
-
 }

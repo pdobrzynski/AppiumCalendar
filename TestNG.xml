@@ -1,0 +1,58 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android Automated Calendar Tests Suites" thread-count="1">
+    <test name="1" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.CreateNewEvent"/>
+        </classes>
+    </test>
+    <test name="2" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.ChangeColorOfEvent"/>
+        </classes>
+    </test>
+    <test name="3" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.ChangeTitleOfEvent"/>
+        </classes>
+    </test>
+    <test name="4" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.SwitchAllDayEventOn"/>
+        </classes>
+    </test>
+    <test name="5" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.SwitchAllDayEventOff"/>
+        </classes>
+    </test>
+    <test name="6" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.ChangeRecurrenceToEveryDay"/>
+        </classes>
+    </test>
+    <test name="7" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.ChangeRecurrenceToEveryWeek"/>
+        </classes>
+    </test>
+    <test name="8" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.ChangeRecurrenceToEveryMonth"/>
+        </classes>
+    </test>
+    <test name="9" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.ChangeRecurrenceToEveryYear"/>
+        </classes>
+    </test>
+    <test name="10" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.ChangeRecurrenceToWeekendOnly"/>
+        </classes>
+    </test>
+    <test name="11" junit="true" >
+        <classes>
+            <class name="Tests.CalendarTests.DeleteEvent"/>
+        </classes>
+    </test>
+</suite>

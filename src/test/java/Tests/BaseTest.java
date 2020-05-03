@@ -33,7 +33,6 @@ public class BaseTest {
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("appActivity", "com.google.android.apps.nexuslauncher.NexusLauncherActivity");
         capabilities.setCapability("appPackage", "com.google.android.apps.nexuslauncher");
-        capabilities.setCapability("unlockDevice", true);
         capabilities.setCapability("autoAcceptAlerts", true);
 
         URL url = new URL("http://0.0.0.0:4723/wd/hub");
@@ -42,9 +41,9 @@ public class BaseTest {
     @After
     public void afterTest() {
 
-        if (driver != null) {
-            driver.quit();
-            driver = null;
+        if (androidDriver != null) {
+            androidDriver.quit();
+            androidDriver = null;
         }
     }
 
